@@ -1,8 +1,12 @@
+import Link from 'next/link'
 import React from 'react'
 
 function AboutContents() {
   return (
-    <div>This is about content</div>
+    <div className='space-x-4'>
+        <Link href={'/about/history'}>History</Link>
+        <Link href={'/about/mission'}>Mission</Link>
+    </div>
   )
 }
 
