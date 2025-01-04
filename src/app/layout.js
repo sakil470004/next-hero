@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <nav>
+      <nav className="bg-blue-500">
       <div>Logo</div>
         <ul><li>
           Home
@@ -31,7 +31,9 @@ export default function RootLayout({ children }) {
         <li>services</li>
         </ul>
       </nav>
-        {children}
+     <div className="my-10">
+     {children}
+     </div>
         <footer>
           This is footer
         </footer>
