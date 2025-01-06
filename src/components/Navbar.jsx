@@ -24,13 +24,29 @@ function Navbar() {
             path:'/about',
         },
         {
+            title:"Dashboard",
+            path:'/dashboard',
+        },
+        {
+            title:"Create User",
+            path:'/createuser',
+        },
+        {
             title:"Services",
             path:'/services',
+        },
+        {
+            title:"Categories",
+            path:'/categories',
         },
     ]
     const handlerLogin=()=>{
         router.push('/login')
     }
+    if (pathName.includes('dashboard'))
+        return <div className='bg-blue-100 text-gray-900'>
+        Dashboard PRO NAV RAINNING Form nav
+        </div>
     return (
         <nav className="bg-blue-500 flex px-6 py-4 justify-between items-center">
             <h2 className='text-3xl text-red-500'>Next Hero</h2>
