@@ -12,6 +12,10 @@ function Navbar() {
             path:'/',
         },
         {
+            title:"Post",
+            path:'/post',
+        },
+        {
             title:"Blogs",
             path:'/blogs',
         },
