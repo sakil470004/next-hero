@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server"
 
 export const middleware=(request)=>{
-    const user=false;
-   
-//    if(request.nextUrl.pathname.startsWith('/dashboard')){
-//     // return NextResponse.next()// it don't do anything just pass the request
+    const user=true ;  //ust pass the request
 //     return NextResponse.redirect(new URL('/', request.url))// it redirect to the home page
 //    }
     // const cookies=request.cookies.get('token');// get the cookies from the request
