@@ -2,7 +2,10 @@ import { getData } from '@/services/postApi';
 import Link from 'next/link';
 import React from 'react'
 
-
+export const metadata = {
+    title: "Posts",
+    description: "A Superpower I got from Next.js",
+  };
 
 const PostPage = async () => {
     const postData = await getData();
@@ -14,9 +17,9 @@ const PostPage = async () => {
                     <div className='border border-1 border-blue-100 p-12 ' key={post.id}>
                         <h3 className='font-bold underline text-xl'>{post.title}</h3>
                         <p>{post.body}</p>
-                        <button className='text-blue-500'>  <Link href={`/post/${post.id}`}>
+                         <Link href={`/post/${post.id}`}><button className='text-blue-500'> 
                             Read More
-                        </Link></button>
+                            </button> </Link>
                     </div>
                 ))}
             </div>

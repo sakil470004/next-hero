@@ -1,16 +1,18 @@
-"use client";
 import { getDataById } from '@/services/postApi';
-import { useParams } from 'next/navigation';
-import React, { use, useEffect, useState } from 'react'
 
-function CurrentPost() {
-    const [postData, setPostData] = useState({});
-    const { id } = useParams();
-    useEffect(() => {
-        getDataById(id).then((data) => {
-            setPostData(data);
-        })
-    }, [id]);
+export async function generateMetadata({ params }) {
+    // read route params
+    const id = (await params).id
+    let postData = await getDataById(id);
+    return {
+        title: postData.title,
+        description: postData.body,
+    }
+}
+
+async function CurrentPost({ params }) {
+    const { id } = await params
+    const postData = await getDataById(id);
     return (
         <div>
             <h1>Post Details </h1>

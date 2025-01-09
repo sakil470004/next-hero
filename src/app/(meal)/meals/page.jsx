@@ -1,6 +1,10 @@
 import Meals from '@/components/Meals';
 
-
+export const metadata = {
+    title: "Meals",
+    description: "A Superpower I got from Next.js",
+  };
+  
 function page() {
     
     return (
