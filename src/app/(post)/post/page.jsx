@@ -8,7 +8,7 @@ export const metadata = {
     description: "A Superpower I got from Next.js",
   };
   export const getData=async()=>{
-    const res=await fetch('https://jsonplaceholder.typicode.com/posts');
+    const res=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`);
     const data=await res.json();
 //    for redirecting to a specific post
     // if(data){
