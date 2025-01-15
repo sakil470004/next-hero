@@ -12,6 +12,10 @@ function Navbar() {
             path:'/',
         },
         {
+            title:"Comments",
+            path:'/comments',
+        },
+        {
             title:"Gallery",
             path:'/gallery',
         },
