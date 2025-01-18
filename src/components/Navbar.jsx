@@ -57,7 +57,7 @@ function Navbar() {
         },
     ]
     const handlerLogin=()=>{
-        router.push('/login')
+        router.push('/api/auth/signin')
     }
     if (pathName.includes('dashboard'))
         return <div className='bg-blue-100 text-gray-900'>
