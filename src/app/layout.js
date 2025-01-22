@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono ,Roboto} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import AuthProvider from "@/server/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,8 @@ export default function RootLayout({ children }) {
       <body
         className={roboto.className}
       >
+      <AuthProvider>
+
         <Navbar />
         <div className="my-10">
           {children}
@@ -37,6 +40,7 @@ export default function RootLayout({ children }) {
         <footer className="bg-blue-200 text-gray-800 text-center p-12">
           This is footer
         </footer>
+      </AuthProvider>
       </body>
     </html>
   );
