@@ -2,6 +2,8 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials"
 
 
+
+
 export const authOptions = {
     secret: process.env.NEXT_PUBLIC_AUTH_SECRET,
     session: {
