@@ -25,6 +25,9 @@ export const authOptions = {
                     placeholder: "Enter Password",
                 },
             },
+
+
+            
             async authorize(credentials) {
                 const { email, password } = credentials;
 
