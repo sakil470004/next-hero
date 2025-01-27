@@ -28,6 +28,8 @@ export const authOptions = {
 
 
             
+
+
             async authorize(credentials) {
                 const { email, password } = credentials;
 
