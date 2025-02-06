@@ -1,7 +1,7 @@
 import AboutContents from '@/components/AboutContents'
 import React from 'react'
 
-// this is now woking with the server side rendering
+// this is working with server side rendering. But to woking with static site generation we need to use getStaticProps
 // const getTime = async () => {
 //   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/time`, {
 //     next: {
